@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import autobind from 'autobind-decorator';
 
 class ComponentDemo2 extends Component {
   constructor() {
@@ -8,6 +9,7 @@ class ComponentDemo2 extends Component {
     };
   }
 
+  @autobind
   click() {
     this.setState(prev => ({
       clickTimes: prev.clickTimes + 1,
@@ -18,7 +20,7 @@ class ComponentDemo2 extends Component {
     const { clickTimes } = this.state;
     return (
       <div>
-        <button type="button" onClick={() => this.click()}>
+        <button type="button" onClick={this.click}>
           you clicked me {clickTimes} times
         </button>
       </div>
