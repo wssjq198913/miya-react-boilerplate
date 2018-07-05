@@ -14,8 +14,8 @@ class App extends Component {
           <img alt="logo" src={logo} className={style['App-logo']} />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <ComponentDemo />
-        <ComponentDemo2 />
+        <ComponentDemo name="component demo1" />
+        <ComponentDemo2 testProp={123} />
         <p className={style['App-intro']}>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>

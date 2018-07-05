@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import autobind from 'autobind-decorator';
 
 class ComponentDemo2 extends Component {
@@ -20,6 +21,7 @@ class ComponentDemo2 extends Component {
     const { clickTimes } = this.state;
     return (
       <div>
+        <span>{this.props.testProp}</span>
         <button type="button" onClick={this.click}>
           you clicked me {clickTimes} times
         </button>
@@ -27,5 +29,9 @@ class ComponentDemo2 extends Component {
     );
   }
 }
+
+ComponentDemo2.propTypes = {
+  testProp: PropTypes.number.isRequired,
+};
 
 export default ComponentDemo2;
