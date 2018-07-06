@@ -12,7 +12,7 @@ class App extends Component {
       <div className={style.App}>
         <header className={style['App-header']}>
           <img alt="logo" src={logo} className={style['App-logo']} />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className={style['App-title']}>Welcome to React</h1>
         </header>
         <ComponentDemo name="component demo1" />
         <ComponentDemo2 testProp={123} />
