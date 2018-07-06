@@ -28,7 +28,7 @@ module.exports = {
      */
 
     // https://webpack.js.org/configuration/devtool/#development
-    devtool: 'source-map',
+    devtool: 'cheap-module-eval-source-map',
 
     cacheBusting: true,
 

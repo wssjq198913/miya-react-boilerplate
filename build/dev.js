@@ -36,8 +36,9 @@ portfinder.getPort((err, port) => {
           : undefined,
       }),
     );
-
-    const devServer = new WebpackDevServer(Webpack(devWebpackConfig), devServerConfig);
+    WebpackDevServer.addDevServerEntrypoints(devWebpackConfig, devServerConfig);
+    const compiler = Webpack(devWebpackConfig);
+    const devServer = new WebpackDevServer(compiler, devServerConfig);
     devServer.listen(port, devServerConfig.host, err => {
       if (err) {
         return console.log(err);
