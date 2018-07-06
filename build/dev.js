@@ -44,7 +44,7 @@ portfinder.getPort((err, port) => {
         return console.log(err);
       }
       console.log(chalk.cyan('Compiling & Starting the development server...\n'));
-      openBrowser(`${devServerConfig.host}:${port}`);
+      openBrowser(`http://${devServerConfig.host}:${port}`);
     });
   }
 });
