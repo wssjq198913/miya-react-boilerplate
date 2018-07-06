@@ -3,6 +3,7 @@ const merge = require('webpack-merge');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const portfinder = require('portfinder');
 const baseWebpackConfig = require('./webpack.base.conf');
@@ -64,6 +65,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       inject: true,
       favicon: utils.resolve('favicon.ico'),
     }),
+    new StyleLintPlugin()
     // copy custom static assets
     // new CopyWebpackPlugin([
     //   {

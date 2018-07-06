@@ -51,6 +51,12 @@
     "react-hot-loader": "^4.3.3",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
+    "stylelint": "^9.3.0",
+    "stylelint-config-airbnb": "^0.0.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.1.3",
+    "stylelint-webpack-plugin": "^0.10.5",
     "url-loader": "^1.0.1",
     "webpack": "^4.14.0",
     "webpack-cli": "^3.0.8",
@@ -123,5 +129,8 @@
     "plugins": {
       "autoprefixer": {}
     }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-airbnb"
   }
 }

@@ -1,4 +1,4 @@
-@import '../../common/common.scss';
+@import "../../common/common.scss";
 
 body {
   margin: 0;
@@ -31,6 +31,12 @@ body {
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

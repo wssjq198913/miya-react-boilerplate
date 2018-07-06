@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const baseWebpackConfig = require('./webpack.base.conf');
 const config = require('../config');
@@ -71,6 +72,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),
+    new StyleLintPlugin()
   ],
 });
 
