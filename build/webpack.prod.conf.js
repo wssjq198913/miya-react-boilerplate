@@ -98,7 +98,4 @@ if (config.build.bundleAnalyzerReport) {
   webpackConfig.plugins.push(new BundleAnalyzerPlugin());
 }
 
-module.exports = new Promise(async (resolve, reject) => {
-  await utils.run('rimraf dist/*');
-  resolve(webpackConfig);
-});
+module.exports = webpackConfig;

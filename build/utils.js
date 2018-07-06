@@ -1,6 +1,5 @@
 const path = require('path');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
-const child = require('child_process');
 const config = require('../config');
 const packageConfig = require('../package.json');
 
@@ -101,14 +100,3 @@ exports.resolve = function(dir) {
   return path.join(__dirname, '..', dir);
 };
 
-exports.run = function(cmd) {
-  return new Promise((resolve, reject) => {
-    child.exec(`${cmd}`, (error, stdout) => {
-      if (error) {
-        console.error(`exec error: ${error}`);
-        reject(error);
-      }
-      resolve(stdout);
-    });
-  });
-};
