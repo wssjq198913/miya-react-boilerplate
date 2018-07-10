@@ -21,6 +21,7 @@ exports.cssLoaders = function(options) {
       sourceMap: options.sourceMap,
       minimize: true,
       modules: true,
+      localIdentName: '[local]--[hash:base64:5]'
     },
   };
 
